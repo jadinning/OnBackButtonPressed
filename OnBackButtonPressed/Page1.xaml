@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OnBackButtonPressed.Page1"
+             Title = "Page1">
+    <ContentPage.Content>
+        <StackLayout Padding="10" Spacing="10">
+            <Entry  
+                    x:Name="TextEntry"
+                    BackgroundColor="White"
+                    Placeholder=""
+                    VerticalOptions="Center" 
+                    HorizontalOptions="FillAndExpand"
+                    Keyboard="Default"
+                    Text="{Binding TextEntryText}"
+                    MaxLength="20"
+                    FontSize="Medium"/>
+            <Label Text="On Android 8.1 and earlier, pressing the hardware back button below will not fire the OnBackButtonPressed event if the Entry above has had focus." Padding="15,0,0,0"/>
+            <Label Text="Press once to close the soft keyboard, press again .. nothing." Padding="15,0,0,0"/>
+            <Label Text="On Android 9 and later, it does, as it should." Padding="15,0,0,0"/>
+            <Label Text="This was not a problem before upgrading to Xamarin.AndroidX or JDK 17 (C:\Program Files\Microsoft\jdk-17.0.4.101-hotspot) or Compiling using Andoid 12.0 (S) (Target Framework). So I am guessing that one of these broke it." Padding="15,0,0,0"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
